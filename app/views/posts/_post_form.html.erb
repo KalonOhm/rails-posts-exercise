@@ -1,0 +1,9 @@
+<%= render partial: 'form_errors', locals: {post: post} %>
+
+<%= form_with(model: post) do |form|%>
+  <div><%= form.label "Title" %>
+  <%= form.text_field :title %></div>
+  <div><%= form.label "Body"%>
+  <%= form.text_area :body %></div>
+  <p><%= form.submit "Submit" %></p>
+<% end %>
